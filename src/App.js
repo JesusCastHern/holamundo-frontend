@@ -4,7 +4,8 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api/hola')
+    // Usando la URL completa del backend
+    fetch('https://holamundo-production.up.railway.app:8080/api/hola')
       .then(response => response.text())
       .then(data => setMessage(data))
       .catch(error => console.error('Error fetching data:', error));
